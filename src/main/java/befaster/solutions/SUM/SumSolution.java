@@ -8,4 +8,6 @@ public class SumSolution {
         throw new SolutionNotImplementedException();
     }
 
+    private boolean inD
+
 }
