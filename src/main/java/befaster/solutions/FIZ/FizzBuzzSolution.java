@@ -19,6 +19,8 @@ public class FizzBuzzSolution {
         }
 
         if (checkForDeluxe(number)) {
+            if (result.length() > 0)
+                result.append(" ");
             result.append(deluxe);
         }
         if (number % 3 != 0 && !String.valueOf(number).contains("3") && number % 5 != 0 &&
