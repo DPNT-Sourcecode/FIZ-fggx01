@@ -11,16 +11,23 @@ public class FizzBuzzSolution {
         String deluxe = "deluxe";
         String fake = "fake";
 
-        if (number % 3 == 0 && String.valueOf(number).contains("3"))
+        if (number % 3 == 0 || String.valueOf(number).contains("3"))
             result.append(fizz);
-        if (number % 5 == 0 && String.valueOf(number).contains("5")) {
+        if (number % 5 == 0 || String.valueOf(number).contains("5")) {
             if (result.toString().contains(fizz))
                 result.append(" ");
             result.append(buzz);
         }
-        
+
+        if (checkForDeluxe(number)) {
+            if (result.length() > 0)
+                result.append(" ");
+            if (!isEven(number))
+                result.append(fake);
+            result.append(deluxe);
+        }
         if (number % 3 != 0 && !String.valueOf(number).contains("3") && number % 5 != 0 &&
-                !String.valueOf(number).contains("5"))
+                !String.valueOf(number).contains("5") && !checkForDeluxe(number))
             result.append(number);
         return result.toString();
     }
@@ -31,6 +38,9 @@ public class FizzBuzzSolution {
         return  digit % 2 == 0;
     }
 
+    private boolean checkForDeluxe(Integer number){
+        return (number % 3 == 0 && String.valueOf(number).contains("3")) || (number % 5 == 0 && String.valueOf(number).contains("5"));
+    }
 
 
 }
