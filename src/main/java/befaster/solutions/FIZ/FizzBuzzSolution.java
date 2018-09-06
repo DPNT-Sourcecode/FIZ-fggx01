@@ -8,6 +8,7 @@ public class FizzBuzzSolution {
         StringBuilder result = new StringBuilder();
         String fizz = "fizz";
         String buzz = "buzz";
+        String deluxe = "deluxe";
 
         if (number % 3 == 0 || String.valueOf(number).contains("3"))
             result.append(fizz);
@@ -16,8 +17,12 @@ public class FizzBuzzSolution {
                 result.append(" ");
             result.append(buzz);
         }
+
+        if (checkForDeluxe(number)) {
+            result.append(deluxe);
+        }
         if (number % 3 != 0 && !String.valueOf(number).contains("3") && number % 5 != 0 &&
-                !String.valueOf(number).contains("5") )
+                !String.valueOf(number).contains("5") && !checkForDeluxe(number))
             result.append(number);
         return result.toString();
     }
@@ -35,14 +40,6 @@ public class FizzBuzzSolution {
             }
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        FizzBuzzSolution solution = new FizzBuzzSolution();
-        System.out.println(solution.checkForDeluxe(11));
-        System.out.println(solution.checkForDeluxe(131));
-        System.out.println(solution.checkForDeluxe(55555));
-        System.out.println(solution.checkForDeluxe(9));
     }
 
 }
