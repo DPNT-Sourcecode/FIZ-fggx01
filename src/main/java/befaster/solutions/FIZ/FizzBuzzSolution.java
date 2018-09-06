@@ -12,8 +12,11 @@ public class FizzBuzzSolution {
 
         if (number % 3 == 0)
             result.append(fizz);
-        if (number % 5 == 0)
+        if (number % 5 == 0) {
+            if (result.toString().contains(fizz))
+                result.append(" ");
             result.append(buzz);
+        }
         if (number % 3 != 0 && number % 5 != 0)
             result.append(num);
         return result.toString();
