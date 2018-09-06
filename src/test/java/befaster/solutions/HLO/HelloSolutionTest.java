@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert;
+import static org.junit.Assert.*;
 
 public class HelloSolutionTest {
     HelloSolution helloSolution;
@@ -16,7 +16,6 @@ public class HelloSolutionTest {
 
     @Test
     public void helloTest(){
-        asse
-        assertThat(helloSolution.hello("George"), );
+        assertEquals(helloSolution.hello("George"), "Hello World");
     }
 }
