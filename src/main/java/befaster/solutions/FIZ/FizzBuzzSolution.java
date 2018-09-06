@@ -22,4 +22,8 @@ public class FizzBuzzSolution {
         return result.toString();
     }
 
+    private boolean checkForDeluxe(Integer number){
+        
+    }
+
 }
