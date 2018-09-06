@@ -21,12 +21,19 @@ public class FizzBuzzSolution {
         if (checkForDeluxe(number)) {
             if (result.length() > 0)
                 result.append(" ");
+//            if ()
             result.append(deluxe);
         }
         if (number % 3 != 0 && !String.valueOf(number).contains("3") && number % 5 != 0 &&
                 !String.valueOf(number).contains("5") && !checkForDeluxe(number))
             result.append(number);
         return result.toString();
+    }
+
+    private boolean checkForOdd(Integer number){
+        String stringNumber = String.valueOf(number);
+        int digit = Integer.valueOf(stringNumber.charAt(stringNumber.length()-1));
+        return  digit % 2 == 0;
     }
 
     private boolean checkForDeluxe(Integer number){
@@ -42,6 +49,14 @@ public class FizzBuzzSolution {
             }
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        FizzBuzzSolution solution = new FizzBuzzSolution();
+        System.out.println(solution.checkForOdd(1));
+        System.out.println(solution.checkForOdd(2));
+        System.out.println(solution.checkForOdd(44));
+        System.out.println(solution.checkForOdd(55));
     }
 
 }
