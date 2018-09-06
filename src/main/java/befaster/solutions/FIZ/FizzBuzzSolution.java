@@ -23,7 +23,26 @@ public class FizzBuzzSolution {
     }
 
     private boolean checkForDeluxe(Integer number){
-        
+        String stringNumber = String.valueOf(number);
+        boolean result = false;
+        if (number > 10)
+        for (int i = 0; i < stringNumber.length(); i++){
+            char check = stringNumber.charAt(0);
+            if (check == stringNumber.charAt(i)){
+                result = true;
+            }else {
+                return false;
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        FizzBuzzSolution solution = new FizzBuzzSolution();
+        System.out.println(solution.checkForDeluxe(11));
+        System.out.println(solution.checkForDeluxe(131));
+        System.out.println(solution.checkForDeluxe(55555));
+        System.out.println(solution.checkForDeluxe(9));
     }
 
 }
