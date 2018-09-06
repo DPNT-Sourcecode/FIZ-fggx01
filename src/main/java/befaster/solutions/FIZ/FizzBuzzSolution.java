@@ -8,7 +8,6 @@ public class FizzBuzzSolution {
         StringBuilder result = new StringBuilder();
         String fizz = "fizz";
         String buzz = "buzz";
-        String num = "1";
 
         if (number % 3 == 0)
             result.append(fizz);
@@ -18,7 +17,7 @@ public class FizzBuzzSolution {
             result.append(buzz);
         }
         if (number % 3 != 0 && number % 5 != 0)
-            result.append(num);
+            result.append(number);
         return result.toString();
 //        throw new SolutionNotImplementedException();
     }
