@@ -16,10 +16,7 @@ public class FizzBuzzSolution {
                 result.append(" ");
             result.append(buzz);
         }
-//        if (number % 3 != 0 && number % 5 != 0)
-//            result.append(number);
         return result.toString();
-//        throw new SolutionNotImplementedException();
     }
 
 }

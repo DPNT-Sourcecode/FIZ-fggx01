@@ -14,10 +14,10 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void fizzBuzzTest(){
-        assertEquals("fizz", fizzBuzzSolution.fizzBuzz(3));
+        assertEquals("fizz", fizzBuzzSolution.fizzBuzz(131));
         assertEquals("fizz", fizzBuzzSolution.fizzBuzz(12));
 
-        assertEquals("buzz", fizzBuzzSolution.fizzBuzz(5));
+        assertEquals("buzz", fizzBuzzSolution.fizzBuzz(454));
         assertEquals("buzz", fizzBuzzSolution.fizzBuzz(25));
 
         assertEquals("fizz buzz", fizzBuzzSolution.fizzBuzz(513));
