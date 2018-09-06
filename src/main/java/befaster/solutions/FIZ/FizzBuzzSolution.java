@@ -11,9 +11,9 @@ public class FizzBuzzSolution {
         String deluxe = "deluxe";
         String fake = "fake";
 
-        if (number % 3 == 0 || String.valueOf(number).contains("3"))
+        if (number % 3 == 0 && String.valueOf(number).contains("3"))
             result.append(fizz);
-        if (number % 5 == 0 || String.valueOf(number).contains("5")) {
+        if (number % 5 == 0 && String.valueOf(number).contains("5")) {
             if (result.toString().contains(fizz))
                 result.append(" ");
             result.append(buzz);
