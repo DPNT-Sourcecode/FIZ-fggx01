@@ -16,6 +16,9 @@ public class FizzBuzzSolution {
                 result.append(" ");
             result.append(buzz);
         }
+        if (number % 3 != 0 && !String.valueOf(number).contains("3") && number % 5 != 0 &&
+                !String.valueOf(number).contains("5") )
+            result.append(number);
         return result.toString();
     }
 
