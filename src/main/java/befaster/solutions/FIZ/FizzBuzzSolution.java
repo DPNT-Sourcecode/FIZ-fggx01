@@ -22,8 +22,8 @@ public class FizzBuzzSolution {
         if (checkForDeluxe(number)) {
             if (result.length() > 0)
                 result.append(" ");
-            if (!isEven(number))
-                result.append(fake);
+            if (!isEven(number) && result.length() > 0)
+                result.append(fake).append(" ");
             result.append(deluxe);
         }
         if (number % 3 != 0 && !String.valueOf(number).contains("3") && number % 5 != 0 &&
