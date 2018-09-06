@@ -18,16 +18,9 @@ public class FizzBuzzSolution {
                 result.append(" ");
             result.append(buzz);
         }
-
-        if (checkForDeluxe(number)) {
-            if (result.length() > 0)
-                result.append(" ");
-            if (!isEven(number))
-                result.append(fake).append(" ");
-            result.append(deluxe);
-        }
+        
         if (number % 3 != 0 && !String.valueOf(number).contains("3") && number % 5 != 0 &&
-                !String.valueOf(number).contains("5") && !checkForDeluxe(number))
+                !String.valueOf(number).contains("5"))
             result.append(number);
         return result.toString();
     }
@@ -38,20 +31,6 @@ public class FizzBuzzSolution {
         return  digit % 2 == 0;
     }
 
-    private boolean checkForDeluxe(Integer number){
-        String stringNumber = String.valueOf(number);
-        boolean result = false;
-        if (number > 10)
-        for (int i = 0; i < stringNumber.length(); i++){
-            char check = stringNumber.charAt(0);
-            if (check == stringNumber.charAt(i)){
-                result = true;
-            }else {
-                return false;
-            }
-        }
-        return result;
-    }
 
 
 }
