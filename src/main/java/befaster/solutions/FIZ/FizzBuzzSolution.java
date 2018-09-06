@@ -9,15 +9,15 @@ public class FizzBuzzSolution {
         String fizz = "fizz";
         String buzz = "buzz";
 
-        if (number % 3 == 0)
+        if (number % 3 == 0 || String.valueOf(number).contains("3"))
             result.append(fizz);
-        if (number % 5 == 0) {
+        if (number % 5 == 0 || String.valueOf(number).contains("5")) {
             if (result.toString().contains(fizz))
                 result.append(" ");
             result.append(buzz);
         }
-        if (number % 3 != 0 && number % 5 != 0)
-            result.append(number);
+//        if (number % 3 != 0 && number % 5 != 0)
+//            result.append(number);
         return result.toString();
 //        throw new SolutionNotImplementedException();
     }

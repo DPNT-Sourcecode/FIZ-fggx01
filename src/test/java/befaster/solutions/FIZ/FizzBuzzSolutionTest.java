@@ -20,9 +20,6 @@ public class FizzBuzzSolutionTest {
         assertEquals("buzz", fizzBuzzSolution.fizzBuzz(5));
         assertEquals("buzz", fizzBuzzSolution.fizzBuzz(25));
 
-        assertEquals("11", fizzBuzzSolution.fizzBuzz(11));
-        assertEquals("31", fizzBuzzSolution.fizzBuzz(31));
-
-        assertEquals("fizz buzz", fizzBuzzSolution.fizzBuzz(30));
+        assertEquals("fizz buzz", fizzBuzzSolution.fizzBuzz(513));
     }
 }
