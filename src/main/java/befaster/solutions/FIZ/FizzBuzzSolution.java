@@ -9,6 +9,7 @@ public class FizzBuzzSolution {
         String fizz = "fizz";
         String buzz = "buzz";
         String deluxe = "deluxe";
+        String fake = "fake";
 
         if (number % 3 == 0 || String.valueOf(number).contains("3"))
             result.append(fizz);
@@ -21,7 +22,8 @@ public class FizzBuzzSolution {
         if (checkForDeluxe(number)) {
             if (result.length() > 0)
                 result.append(" ");
-//            if ()
+            if (!isEven(number))
+                result.append(fake).append(" ");
             result.append(deluxe);
         }
         if (number % 3 != 0 && !String.valueOf(number).contains("3") && number % 5 != 0 &&
@@ -30,7 +32,7 @@ public class FizzBuzzSolution {
         return result.toString();
     }
 
-    private boolean checkForOdd(Integer number){
+    private boolean isEven(Integer number){
         String stringNumber = String.valueOf(number);
         int digit = Integer.valueOf(stringNumber.charAt(stringNumber.length()-1));
         return  digit % 2 == 0;
@@ -51,12 +53,5 @@ public class FizzBuzzSolution {
         return result;
     }
 
-    public static void main(String[] args) {
-        FizzBuzzSolution solution = new FizzBuzzSolution();
-        System.out.println(solution.checkForOdd(1));
-        System.out.println(solution.checkForOdd(2));
-        System.out.println(solution.checkForOdd(44));
-        System.out.println(solution.checkForOdd(55));
-    }
 
 }
